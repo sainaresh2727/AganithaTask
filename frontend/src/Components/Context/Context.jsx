@@ -7,7 +7,7 @@ function Context({children}) {
   //FOR URL AND RANDOM CODE
   let [LongUrl,setLongUrl]=useState("")
   let [ShortCode,setShortCode]=useState("")
-  let [Error,setError]=useStae(")
+  let [Error,setError]=useState("")
   
   async function UrlDatas(e) {
     e.preventDefault()
