@@ -11,7 +11,7 @@ function Context({children}) {
   async function UrlDatas(e) {
     e.preventDefault()
     try{
-        let UrlDatas=await Axios.post('http://localhost:8000/api/UrlDatas',{LongUrl,ShortCode}) 
+        let UrlDatas=await Axios.post('https://aganithatask-backend.onrender.com/api/UrlDatas',{LongUrl,ShortCode}) 
         alert(UrlDatas.data.message)
         setLongUrl("")
         setShortCode("")
@@ -26,7 +26,7 @@ function Context({children}) {
   let [LongUrlData,setLongUrlData]=useState([])
   async function GetUrlDatas() {
    try{
-    let Url=await Axios.get('http://localhost:8000/api/GetUrlData')
+    let Url=await Axios.get('https://aganithatask-backend.onrender.com/api/GetUrlData')
     setLongUrlData(Url.data.data)
    }
    catch(err){
@@ -42,7 +42,7 @@ function Context({children}) {
 
   async function DeleteLink(code) {
      if (!window.confirm("Delete this link?")) return;
-     let Delete=await Axios.delete(`http://localhost:8000/api/DeleteUrl/${code}`)
+     let Delete=await Axios.delete(`https://aganithatask-backend.onrender.com/api/DeleteUrl/${code}`)
      window.location.reload();
      alert(Delete.data.message)
      GetUrlDatas()
