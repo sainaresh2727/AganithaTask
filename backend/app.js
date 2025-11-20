@@ -10,6 +10,10 @@ App.use(Cors())
 let Db=require("./Db/Db")
 Db()
 
+
+App.get('/',async (req,res) => {
+    res.json("Hello")
+})
 let UrlModel=require("./Model/Model")
 
 function ValidateUrl(url){
