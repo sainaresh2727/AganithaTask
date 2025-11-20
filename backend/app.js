@@ -35,7 +35,7 @@ App.post('/api/UrlDatas',async (req,res) => {
                 message:"Invalid Url"
             })
         }
-        if(!/^[A-Za-z0-9]{10,20}$/.test(ShortCode)){
+        if(!/^[A-Za-z0-9]{6,8}$/.test(ShortCode)){
             return res.status(400).json({
                 success:false,
                 message:"Code Must Be 6-8 Characters"
