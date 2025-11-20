@@ -1,0 +1,97 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: black;
+   
+
+}
+/* ===============MAIN CONTENT CSS STARTS======== */
+#UrlCF{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+}
+#FormCard{
+    color: #ff512f;
+    box-shadow: 0px 0px 20px #ff512f;
+}
+#UrlDatasForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+#UrlDatasForm input{
+    margin-top: 12px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #ff512f;
+    border: none;
+}
+#UrlDatasForm label{
+    font-style: italic;
+    font-weight: bold;
+}
+#Submit1{
+    padding: 5px 12px;
+    background: linear-gradient(135deg, #ff512f, #f09819);
+    color: white;
+}
+/* ===============MAIN CONTENT CSS ENDS  ======== */
+/* NAVBAR CSS STARTS */
+#NavBarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Brand h4{
+    margin: auto 0px;
+    color: #ff512f;
+    font-style: italic;
+    font-weight: bold;
+}
+#ViewLinks button{
+    margin: auto 0px;
+    background: linear-gradient(135deg, #ff512f, #f09819);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+#CloseButton{
+    color: white !important;
+}
+#Table{
+color: #ff512f;
+}
+
+#DeleteBtn{
+background: linear-gradient(135deg, #ff512f, #f09819);
+padding: 5px 10px; 
+border: none;   
+border-radius: 20px;
+color: white;
+}
+#OffCanvasHeader h3{
+    font-style: italic;
+    color: #ff512f;
+}
+#Home{
+    text-decoration: none;
+    color: #ff512f;
+    font-weight: bold;
+    font-style: italic;
+}
+/* NAVBAR CSS ENDS */
+/*=======FOOTER CSS STARTS============*/
+#Footer{
+    background-color: black;
+    color: white;
+}
+#Footer span{
+    color: #ff512f;
+}
+/* ============FOOTER CSS ENDS===========*/
