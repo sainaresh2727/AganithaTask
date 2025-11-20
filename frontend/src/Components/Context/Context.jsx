@@ -11,7 +11,11 @@ function Context({children}) {
   async function UrlDatas(e) {
     e.preventDefault()
     try{
+<<<<<<< HEAD
         let UrlDatas=await Axios.post('https://aganithatask-backend.onrender.com/api/UrlDatas',{LongUrl,ShortCode}) 
+=======
+        let UrlDatas=await Axios.post('https://aganitha-task-backend.vercel.app/api/UrlDatas',{LongUrl,ShortCode}) 
+>>>>>>> 0a7f5b82465f1a461c8a027b51da21fbf58f7a5f
         alert(UrlDatas.data.message)
         setLongUrl("")
         setShortCode("")
@@ -26,7 +30,11 @@ function Context({children}) {
   let [LongUrlData,setLongUrlData]=useState([])
   async function GetUrlDatas() {
    try{
+<<<<<<< HEAD
     let Url=await Axios.get('https://aganithatask-backend.onrender.com/api/GetUrlData')
+=======
+    let Url=await Axios.get('https://aganitha-task-backend.vercel.app/api/GetUrlData')
+>>>>>>> 0a7f5b82465f1a461c8a027b51da21fbf58f7a5f
     setLongUrlData(Url.data.data)
    }
    catch(err){
@@ -42,7 +50,11 @@ function Context({children}) {
 
   async function DeleteLink(code) {
      if (!window.confirm("Delete this link?")) return;
+<<<<<<< HEAD
      let Delete=await Axios.delete(`https://aganithatask-backend.onrender.com/api/DeleteUrl/${code}`)
+=======
+     let Delete=await Axios.delete(`https://aganitha-task-backend.vercel.app/api/DeleteUrl/${code}`)
+>>>>>>> 0a7f5b82465f1a461c8a027b51da21fbf58f7a5f
      window.location.reload();
      alert(Delete.data.message)
      GetUrlDatas()

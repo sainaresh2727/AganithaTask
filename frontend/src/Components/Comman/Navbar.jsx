@@ -52,7 +52,7 @@ function Navbar() {
       <tr key={y}>
       <td>{x.LongUrl}</td>
       <td>{x.ShortCode}</td>
-      <td><a href={`https://aganithatask-backend.onrender.com/${x.ShortCode}`}>{x.ShortCode}</a></td>
+      <td><a href={`http://localhost:8000/${x.ShortCode}`}>{x.ShortCode}</a></td>
       <td>{x.Clicks}</td>
       <td>{x.LastClicked}</td>
       <td>{x.CreatedAt}</td>
@@ -63,6 +63,7 @@ function Navbar() {
    })
    }
    </tbody>
+   <p style={{color:"red",fontStyle:"italic"}}></p>
    </table>
    </div>
 
