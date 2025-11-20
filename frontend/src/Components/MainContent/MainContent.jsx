@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { My_Context } from '../Context/Context'
 
 function MainContent() {
-  let {LongUrl,setLongUrl,ShortCode,setShortCode,UrlDatas}=useContext(My_Context)
+  let {LongUrl,setLongUrl,ShortCode,setShortCode,UrlDatas,Error}=useContext(My_Context)
   return (
     <>
     <section className='container-fluid' id='UrlCF'>
@@ -24,6 +24,9 @@ function MainContent() {
     <div>
     <label>ENTER THE SHORT CODE:</label>
     <input type="text" placeholder='Code Must Be 6-8 Characters' className='form-control' onChange={(e)=>setShortCode(e.target.value)} value={ShortCode} required />
+    </div>
+    <div className='mx-auto'>
+     <p style={{color:"red",fontStyle:"italic"}}>{Error}</p>
     </div>
     <div className='mx-auto'>
     <input type="submit" id='Submit1' />
