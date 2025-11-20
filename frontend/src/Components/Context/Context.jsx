@@ -7,6 +7,7 @@ function Context({children}) {
   //FOR URL AND RANDOM CODE
   let [LongUrl,setLongUrl]=useState("")
   let [ShortCode,setShortCode]=useState("")
+  let [Error,setError]=useStae(")
   
   async function UrlDatas(e) {
     e.preventDefault()
@@ -19,6 +20,7 @@ function Context({children}) {
     }
     catch(err){
         console.log(err.response?.data?.message||err.message);
+        setError(err.response?.data?.message||err.message)
         
     }
   }
@@ -50,7 +52,7 @@ function Context({children}) {
 
   return (
     <>
-    <My_Context.Provider value={{LongUrl,setLongUrl,ShortCode,setShortCode,UrlDatas,LongUrlData,DeleteLink}}>
+    <My_Context.Provider value={{LongUrl,setLongUrl,ShortCode,setShortCode,UrlDatas,LongUrlData,DeleteLink,Error}}>
     {children}
     </My_Context.Provider>
     </>
