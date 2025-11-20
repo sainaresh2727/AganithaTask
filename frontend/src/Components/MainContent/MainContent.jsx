@@ -23,7 +23,7 @@ function MainContent() {
     </div>
     <div>
     <label>ENTER THE SHORT CODE:</label>
-    <input type="text" placeholder='Enter The Code' className='form-control' onChange={(e)=>setShortCode(e.target.value)} value={ShortCode} required />
+    <input type="text" placeholder='Code Must Be 6-8 Characters' className='form-control' onChange={(e)=>setShortCode(e.target.value)} value={ShortCode} required />
     </div>
     <div className='mx-auto'>
     <input type="submit" id='Submit1' />
