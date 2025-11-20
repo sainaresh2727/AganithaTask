@@ -14,11 +14,6 @@ function Context({children}) {
     try{
 
         let UrlDatas=await Axios.post('https://aganithatask-backend.onrender.com/api/UrlDatas',{LongUrl,ShortCode}) 
-
-        let UrlDatas=await Axios.post('https://aganitha-task-backend.vercel.app/api/UrlDatas',{LongUrl,ShortCode}) 
-
-        let UrlDatas=await Axios.post('https://aganithatask-backend.onrender.com/api/UrlDatas',{LongUrl,ShortCode}) 
-
         alert(UrlDatas.data.message)
         setLongUrl("")
         setShortCode("")
@@ -36,11 +31,6 @@ function Context({children}) {
    try{
 
     let Url=await Axios.get('https://aganithatask-backend.onrender.com/api/GetUrlData')
-
-    let Url=await Axios.get('https://aganitha-task-backend.vercel.app/api/GetUrlData')
-
-    let Url=await Axios.get('https://aganithatask-backend.onrender.com/api/GetUrlData')
-
     setLongUrlData(Url.data.data)
    }
    catch(err){
@@ -58,12 +48,7 @@ function Context({children}) {
      if (!window.confirm("Delete this link?")) return;
 
      let Delete=await Axios.delete(`https://aganithatask-backend.onrender.com/api/DeleteUrl/${code}`)
-
-     let Delete=await Axios.delete(`https://aganitha-task-backend.vercel.app/api/DeleteUrl/${code}`)
-
-     let Delete=await Axios.delete(`https://aganithatask-backend.onrender.com/api/DeleteUrl/${code}`)
-
-     window.location.reload();
+      window.location.reload();
      alert(Delete.data.message)
      GetUrlDatas()
   }
